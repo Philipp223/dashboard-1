@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-excel_path = "TLL-Sellerboard-daily.xlsx"
+excel_path = "Musterdaten-Sellerboard-daily.xlsx"
 
 # --- Daten einlesen ---
 df = pd.read_excel(excel_path)
@@ -27,7 +27,7 @@ df_filtered = df.loc[mask]
 if not df_filtered.empty:
     min_date = df_filtered["order-date"].min().date()
     max_date = df_filtered["order-date"].max().date()
-    st.write(f"📊 Spermidine Absatz von {min_date} bis {max_date}")
+    st.write(f"📊 Musterunternehmen Absatz von {min_date} bis {max_date}")
 
     # --- Tabelle und Chart ---
     st.dataframe(df_filtered.groupby("asin").units.sum())
