@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-excel_path = "C:/Users/user/OneDrive - Schmidt & Schöne GmbH/Philipp/Python in Excel/TLL-Sellerboard-daily.xlsx"
+excel_path = "TLL-Sellerboard-daily.xlsx"
 
 # --- Daten einlesen ---
 df = pd.read_excel(excel_path)
